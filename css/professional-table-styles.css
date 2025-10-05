@@ -1,0 +1,303 @@
+/* 🌊 专业24小时数据表格样式 */
+
+.professional-table-container {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.table-title {
+    background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+    color: white;
+    margin: 0;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.table-info {
+    background: #f8f9fa;
+    padding: 10px 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: #666;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.table-info span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.data-source {
+    color: #2196F3;
+    font-weight: 600;
+}
+
+.calibration-info {
+    color: #4CAF50;
+    font-weight: 600;
+}
+
+.update-time {
+    color: #666;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.professional-hourly-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    min-width: 800px;
+}
+
+.professional-hourly-table thead {
+    background: #f5f5f5;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.professional-hourly-table th {
+    padding: 12px 8px;
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    white-space: nowrap;
+}
+
+.professional-hourly-table th small {
+    display: block;
+    font-size: 10px;
+    color: #666;
+    font-weight: normal;
+    margin-top: 2px;
+}
+
+.professional-hourly-table td {
+    padding: 10px 8px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+/* 列宽控制 */
+.time-col { width: 60px; }
+.calibrated-col { width: 80px; }
+.total-col { width: 70px; }
+.swell-col { width: 60px; }
+.period-col { width: 55px; }
+.wind-col { width: 60px; }
+
+/* 特殊单元格样式 */
+.time-cell {
+    font-weight: 600;
+    color: #333;
+    background: #fafafa;
+}
+
+.calibrated-cell {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    font-weight: 600;
+    position: relative;
+}
+
+.calibration-badge {
+    font-size: 9px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1px 4px;
+    border-radius: 8px;
+    margin-top: 2px;
+}
+
+.total-cell {
+    background: #e3f2fd;
+    color: #1976d2;
+    font-weight: 600;
+}
+
+.swell-cell {
+    background: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.period-cell {
+    background: #fff3e0;
+    color: #f57c00;
+    font-size: 11px;
+}
+
+.wind-cell {
+    background: #e8f5e8;
+    color: #388e3c;
+}
+
+/* 行级别样式 */
+.excellent-row {
+    background: linear-gradient(90deg, rgba(76, 175, 80, 0.1) 0%, transparent 100%);
+}
+
+.good-row {
+    background: linear-gradient(90deg, rgba(33, 150, 243, 0.1) 0%, transparent 100%);
+}
+
+.fair-row {
+    background: linear-gradient(90deg, rgba(255, 152, 0, 0.1) 0%, transparent 100%);
+}
+
+.poor-row {
+    background: linear-gradient(90deg, rgba(244, 67, 54, 0.1) 0%, transparent 100%);
+}
+
+/* 悬停效果 */
+.professional-hourly-table tbody tr:hover {
+    background: rgba(33, 150, 243, 0.05);
+    transform: scale(1.01);
+    transition: all 0.2s ease;
+}
+
+/* 图例 */
+.table-legend {
+    display: flex;
+    gap: 15px;
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-top: 1px solid #e0e0e0;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: #666;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+}
+
+.legend-color.excellent {
+    background: #4CAF50;
+}
+
+.legend-color.good {
+    background: #2196F3;
+}
+
+.legend-color.fair {
+    background: #FF9800;
+}
+
+.legend-color.poor {
+    background: #f44336;
+}
+
+/* 错误状态 */
+.table-error {
+    padding: 40px 20px;
+    text-align: center;
+    color: #666;
+}
+
+.table-error p {
+    margin: 5px 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .table-info {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .professional-hourly-table {
+        font-size: 11px;
+    }
+    
+    .professional-hourly-table th,
+    .professional-hourly-table td {
+        padding: 8px 4px;
+    }
+    
+    .table-legend {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* 滚动条样式 */
+.table-wrapper::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* 加载动画 */
+.table-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    color: #666;
+}
+
+.table-loading::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #2196F3;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 表格注释 */
+.table-note {
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-top: 1px solid #e0e0e0;
+    font-size: 12px;
+    color: #666;
+}
+
+.table-note p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
