@@ -208,12 +208,13 @@ class Enhanced7DaySurfPredictor {
     }
 
     applyFourFactorCalibration(waveHeight, spot) {
-        const terrainFactor = 0.7;
-        const seabedFactor = 0.8;
-        const tidalFactor = 0.9;
-        const energyFactor = 0.6;
+        const terrainFactor = 0.85;   // 提高到合理水平
+        const seabedFactor = 0.9;     // 减少海床衰减
+        const tidalFactor = 0.95;     // 减少潮汐影响
+        const energyFactor = 0.8;     // 提高能量保留
         
-        const combinedFactor = terrainFactor * seabedFactor * tidalFactor * energyFactor * spot.calibration;
+        // 移除spot.calibration，避免双重校准
+        const combinedFactor = terrainFactor * seabedFactor * tidalFactor * energyFactor;
         
         return Math.max(0.1, waveHeight * combinedFactor);
     }
