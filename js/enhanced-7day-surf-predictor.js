@@ -37,8 +37,7 @@ class Enhanced7DaySurfPredictor {
                         lon: spot.lng,
                         model: 'gfsWave',
                         parameters: ['waves', 'swell1', 'swell2', 'windWaves'],
-                        levels: ['surface'],
-                        key: this.apiKey
+                        levels: ['surface']
                     })
                 });
 
@@ -57,8 +56,7 @@ class Enhanced7DaySurfPredictor {
                         lon: spot.lng,
                         model: 'gfs',
                         parameters: ['wind', 'temp'],
-                        levels: ['surface'],
-                        key: this.apiKey
+                        levels: ['surface']
                     })
                 });
 

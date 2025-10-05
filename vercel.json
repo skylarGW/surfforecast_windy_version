@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/windy-data.js": {
+      "maxDuration": 10
+    }
+  },
+  "env": {
+    "WINDY_API_KEY": "gE7AqAGKM8h6TcgHDoseU8HmmddSqQka"
+  }
+}
